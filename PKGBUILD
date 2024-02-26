@@ -4,7 +4,7 @@ pkgname=trenchbroom-2023.1-x86_64
 pkgver=2023.1
 _pkgver=Linux-ubuntu-22.04-v$pkgver-Release.$CARCH
 pkgrel=1
-pkgdesc="A free (GPLv3), cross platform level editor for Quake-engine based games"
+pkgdesc="A free (GPLv3), cross platform level editor for Quake-engine based games. x86_64 Release version."
 arch=("x86_64")
 url="https://trenchbroom.github.io/"
 license=('GPL3')
@@ -28,5 +28,5 @@ package() {
   install -Dm644 "usr/share/$_pkgname/icons/icon_512.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/trenchbroom.png"
   cp -rf "." "$pkgdir"
   rm -f "$pkgdir/usr/share/$_pkgname/trenchbroom.desktop"
-  ln -s "/usr/lib/libtinyxml2.so.10.0.0 /usr/lib/libtinyxml2.so.9"
+  sudo ln -s "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
 }
