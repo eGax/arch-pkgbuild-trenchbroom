@@ -1,0 +1,24 @@
+pkgbase = trenchbroom-2023.1-x86_64
+	pkgdesc = A free (GPLv3), cross platform level editor for Quake-engine based games
+	pkgver = 2023.1
+	pkgrel = 1
+	url = https://trenchbroom.github.io/
+	arch = x86_64
+	license = GPL3
+	depends = freeimage
+	depends = freetype2
+	depends = mesa
+	depends = libgl
+	depends = freeglut
+	depends = libxxf86vm
+	depends = glew
+	depends = glm
+	depends = tinyxml2
+	provides = trenchbroom
+	conflicts = trenchbroom
+	conflicts = trenchbroom-git
+	noextract = TrenchBroom-Linux-ubuntu-22.04-v2023.1-Release.x86_64.deb
+	source = https://github.com/TrenchBroom/TrenchBroom/releases/download/v2023.1/TrenchBroom-Linux-ubuntu-22.04-v2023.1-Release.x86_64.deb
+	sha256sums = b7e2e8b84109799367e1e044ecd32ff9b002b04c96137bfa358e9a650bdda79e
+
+pkgname = trenchbroom-2023.1-x86_64
