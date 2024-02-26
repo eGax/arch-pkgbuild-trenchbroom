@@ -1,4 +1,4 @@
-The purpose of this is to enable Arch users to build the last official release of TrenchBroom 2023.1. since the current AUR version is broke, missing depends, etc.
+The purpose of this is to enable Arch and Arch based distro users to build the last official release of TrenchBroom 2023.1. since I have no control of the AUR version when it is broke, missing depends, etc.
 
 To build TB in your Arch distro of choice from a terminal :
 
