@@ -20,6 +20,8 @@ prepare() {
   mkdir -p "$pkgname-$pkgver-files"
   bsdtar xvf "$srcdir/$_pkgname-$_pkgver.deb" -C "$pkgname-$pkgver"
   bsdtar xvf "$pkgname-$pkgver/data.tar.gz" -C "$pkgname-$pkgver-files"
+  echo "symlinking '/usr/lib/libtinyxml2.so.10.0.0' to '/usr/lib/libtinyxml2.so.9'"
+  sudo ln -s -f "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
 }
 
 package() {
@@ -28,5 +30,4 @@ package() {
   install -Dm644 "usr/share/$_pkgname/icons/icon_512.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/trenchbroom.png"
   cp -rf "." "$pkgdir"
   rm -f "$pkgdir/usr/share/$_pkgname/trenchbroom.desktop"
-  sudo ln -s -f "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
 }
