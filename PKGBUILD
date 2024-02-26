@@ -28,5 +28,5 @@ package() {
   install -Dm644 "usr/share/$_pkgname/icons/icon_512.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/trenchbroom.png"
   cp -rf "." "$pkgdir"
   rm -f "$pkgdir/usr/share/$_pkgname/trenchbroom.desktop"
-  sudo ln -s "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
+  sudo ln -f -s "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
 }
