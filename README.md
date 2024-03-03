@@ -1,4 +1,4 @@
-The purpose of this is to enable Arch and Arch based distro users to install the last official release of TrenchBroom 2023.1. In case of no control of the AUR version or when pkgbuild breaks from Arch or TrenchBroom changes requiring attention, etc.
+The purpose of this is to enable Arch and Arch based distro users to install the last official release of TrenchBroom 2023.1. This a backup of the AUR entry https://aur.archlinux.org/packages/trenchbroom-bin
 
 To install TB in your Arch distro of choice from a terminal :
 
