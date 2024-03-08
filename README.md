@@ -1,4 +1,4 @@
-The purpose of this is to enable Arch users to build the last official release of TrenchBroom 2023.1. since the current AUR version is broke, missing depends, etc.
+The purpose of this is to enable Arch users to build the past official release of TrenchBroom, version 2023.1.
 
 To build TB in your Arch distro of choice from a terminal :
 
@@ -7,7 +7,7 @@ To build TB in your Arch distro of choice from a terminal :
 `makepkg -si`<br>
 
 
-That will clone it, enter it, build it, look for a libtinyxml2.so.9, if not found then create one from from `/usr/lib/libtinyxml2.so.10.0.0` to `/usr/lib/libtinyxml2.so.9`, then installs the package into your system.<br>
+That will clone it, enter it, build it, look for required version libtinyxml2.so.9, if not found then create a symlink from current `/usr/lib/libtinyxml2.so.10.0.0` to `/usr/lib/libtinyxml2.so.9`, then installs the package into your system.<br>
 <br>
 <br>
 If you want to use a more current build of TrenchBroom that will be the next 2024 release, highly recommend using my AUR trenchbroom-git https://aur.archlinux.org/packages/trenchbroom-git 
