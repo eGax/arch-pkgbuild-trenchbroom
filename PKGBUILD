@@ -1,10 +1,10 @@
 # Maintainer: Retro_Gamer / xaGe <https://github.com/eGax>
 _pkgname=TrenchBroom
-pkgname=trenchbroom-2023.1-x86_64
-pkgver=2023.1
+pkgname=trenchbroom-2024.1-x86_64
+pkgver=2024.1
 _pkgver=Linux-ubuntu-22.04-v$pkgver-Release.$CARCH
 pkgrel=1
-pkgdesc="A free (GPLv3), cross platform level editor for Quake-engine based games. x86_64 Ubuntu Release version."
+pkgdesc="A free (GPLv3), cross platform level editor for Quake-engine based games. x86_64 Ubuntu Release version repackaged for Arch."
 arch=("x86_64")
 url="https://trenchbroom.github.io/"
 license=('GPL3')
@@ -13,7 +13,7 @@ conflicts=('trenchbroom' 'trenchbroom-git')
 depends=("freeimage" "freetype2" "mesa" "libgl" "freeglut" "libxxf86vm" "glew" "glm" "tinyxml2")
 source=("https://github.com/TrenchBroom/TrenchBroom/releases/download/v$pkgver/$_pkgname-$_pkgver.deb")
 noextract=("$_pkgname-$_pkgver.deb")
-sha256sums=('b7e2e8b84109799367e1e044ecd32ff9b002b04c96137bfa358e9a650bdda79e')
+sha256sums=('7e2b59dfcdfc94841d62a29a01581672a47935138f9b21f9faa113fbbf1ca7ce')
 
 prepare() {
   mkdir -p "$pkgname-$pkgver"
