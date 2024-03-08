@@ -1,10 +1,10 @@
 # Maintainer: Retro_Gamer / xaGe <https://github.com/eGax>
 _pkgname=TrenchBroom
-pkgname=trenchbroom-2024.1-x86_64
-pkgver=2024.1
+pkgname=trenchbroom-2023.1-x86_64
+pkgver=2023.1
 _pkgver=Linux-ubuntu-22.04-v$pkgver-Release.$CARCH
 pkgrel=1
-pkgdesc="A free (GPLv3), cross platform level editor for Quake-engine based games. x86_64 Ubuntu Release version repackaged for Arch."
+pkgdesc="TrenchBroom is a free (GPLv3+), cross platform level editor for Quake-engine based games. This is the Ubuntu Release version of TrenchBroom 2023.1 repackaged for Arch."
 arch=("x86_64")
 url="https://trenchbroom.github.io/"
 license=('GPL3')
@@ -13,15 +13,15 @@ conflicts=('trenchbroom' 'trenchbroom-git')
 depends=("freeimage" "freetype2" "mesa" "libgl" "freeglut" "libxxf86vm" "glew" "glm" "tinyxml2")
 source=("https://github.com/TrenchBroom/TrenchBroom/releases/download/v$pkgver/$_pkgname-$_pkgver.deb")
 noextract=("$_pkgname-$_pkgver.deb")
-sha256sums=('7e2b59dfcdfc94841d62a29a01581672a47935138f9b21f9faa113fbbf1ca7ce')
+sha256sums=('b7e2e8b84109799367e1e044ecd32ff9b002b04c96137bfa358e9a650bdda79e')
 
 prepare() {
   mkdir -p "$pkgname-$pkgver"
   mkdir -p "$pkgname-$pkgver-files"
   bsdtar xvf "$srcdir/$_pkgname-$_pkgver.deb" -C "$pkgname-$pkgver"
   bsdtar xvf "$pkgname-$pkgver/data.tar.gz" -C "$pkgname-$pkgver-files"
-  echo "symlinking '/usr/lib/libtinyxml2.so.10.0.0' to '/usr/lib/libtinyxml2.so.9'"
-  sudo ln -s -f "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"
+  # Ubuntu TB2023.1 requires libtinyxml2.so.9 / Arch is on 10, look for a valid symlink of 9, if none, create one from current libtinyxml2.10.0.0
+  if [ ! -e "/usr/lib/libtinyxml2.so.9" ]; then sudo ln -s "/usr/lib/libtinyxml2.so.10.0.0" "/usr/lib/libtinyxml2.so.9"; else echo "complete"; fi
 }
 
 package() {
