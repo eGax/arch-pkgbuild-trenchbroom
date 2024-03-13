@@ -1,4 +1,4 @@
-The purpose of this is to enable Arch users to install the past official release of TrenchBroom, version 2023.1, the same the AUR did.<br>
+The purpose of this is to enable Arch users to install the past official release of TrenchBroom, version 2023.1, the same way the AUR did.<br>
 
 To install TB in your Arch distro of choice from a terminal :
 
