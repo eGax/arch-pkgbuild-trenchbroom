@@ -1,6 +1,6 @@
 The purpose of this is to enable Arch users to install the past official release of TrenchBroom, version 2023.1. The way the AUR does.
 
-To build TB in your Arch distro of choice from a terminal :
+To install TB in your Arch distro of choice from a terminal :
 
 `git clone https://github.com/eGax/arch-pkgbuild-trenchbroom.git`<br>
 `cd arch-pkgbuild-trenchbroom`<br>
